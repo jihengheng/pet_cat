@@ -1,3 +1,5 @@
+import BookingForm from "./components/BookingForm";
+
 const services = [
   {
     title: "基础洗护",
@@ -166,29 +168,7 @@ export default function Home() {
           <h2>预约一次更轻松的洗护体验</h2>
           <p>留下宠物品种、体重和希望到店时间，护理顾问会在营业时间内确认档期。</p>
         </div>
-        <form className="bookingForm">
-          <label>
-            宠物昵称
-            <input name="petName" placeholder="例如：糯米" />
-          </label>
-          <label>
-            服务类型
-            <select name="service" defaultValue="">
-              <option value="" disabled>
-                请选择
-              </option>
-              <option>基础洗护</option>
-              <option>精致美容</option>
-              <option>猫咪专护</option>
-              <option>皮毛养护</option>
-            </select>
-          </label>
-          <label>
-            联系方式
-            <input name="phone" placeholder="手机号或微信" />
-          </label>
-          <button type="submit">提交预约</button>
-        </form>
+        <BookingForm />
       </section>
     </main>
   );
